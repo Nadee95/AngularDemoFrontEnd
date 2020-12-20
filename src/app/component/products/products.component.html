@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="container p" >
+<div  *ngFor="let product of productArr" class="card" style="width: 18rem;" >
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{product.description}}</h6>
+      <p class="card-text">Quantity : {{product.quantity}}</p>
+      <a [routerLink]="['/single-product']" [state]="{ data: product}">View Product</a>
+    </div>
+  </div>
+</div>
